@@ -1,0 +1,131 @@
+$dark-background: #1d1128;
+$primary-color: #e5d4ed;
+$secondary-color: #6d72c3;
+$alternate-color: #5941a9;
+$disabled-color: #514f59;
+$pallette: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  alternate: $alternate-color,
+  disabled: $disabled-color,
+  dark: $dark-background,
+);
+@each $color, $value in $pallette {
+  .#{$color}-color {
+    color: $value;
+  }
+  .#{$color}-background {
+    background-color: $value;
+  }
+  .#{$color}-border {
+    border-color: $value;
+  }
+  .#{$color}-shadow {
+    box-shadow: 0px 0px 0px 1px $value;
+  }
+}
+.form-control {
+  background-color: $dark-background !important;
+  color: $primary-color !important;
+  &:focus {
+    background-color: $dark-background !important;
+    border-color: $secondary-color;
+    border-radius: 10px;
+    box-shadow: 0 0 0 0.25rem $secondary-color;
+    color: $primary-color !important;
+    outline: 0;
+  }
+}
+.recharts-default-tooltip {
+  background-color: $dark-background !important;
+  color: $primary-color !important;
+  border-radius: 10px;
+  .recharts-tooltip-item {
+    span {
+      color: $primary-color !important;
+    }
+  }
+}
+.recharts-cartesian-axis-ticks {
+  text {
+    tspan {
+      fill: $primary-color !important;
+    }
+  }
+}
+.table-hover {
+  tbody {
+    tr:hover {
+      background-color: $secondary-color !important;
+      color: $primary-color !important;
+      a {
+        color: $primary-color !important;
+      }
+    }
+  }
+}
+.btn {
+  color: $primary-color !important;
+  &:hover {
+    color: $secondary-color !important;
+  }
+}
+
+.btn-primary {
+  background-color: $primary-color !important;
+  border-color: $primary-color !important;
+  color: $dark-background !important;
+  &:hover {
+    background-color: $secondary-color !important;
+    border-color: $secondary-color !important;
+    color: $dark-background !important;
+  }
+  &:disabled {
+    background-color: $disabled-color !important;
+    border-color: $disabled-color !important;
+    color: $dark-background !important;
+  }
+}
+.page-link {
+  @extend .btn-primary;
+}
+.accordion {
+  --bs-accordion-color: $primary-color;
+  --bs-accordion-bg: $dark-background;
+  --bs-accordion-btn-color: $primary-color;
+  --bs-accordion-btn-bg: $dark-background;
+  --bs-accordion-active-color: $primary-color;
+  --bs-accordion-active-bg: $alternate-color;
+  .accordion-item {
+    color: $primary-color !important;
+    background-color: $dark-background !important;
+    border-color: $secondary-color !important;
+    &::after {
+      color: $primary-color !important;
+    }
+  }
+}
+body {
+  @extend .dark-background;
+}
+#root {
+  color-scheme: dark;
+}
+.tooltip-custom:hover {
+  &::after {
+    content: attr(data-date);
+    background: rgba(112, 108, 108, 0.5);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+    margin-left: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.linkIcon {
+  margin-left: 8px;
+  color: $secondary-color;
+}
+.infoIcon {
+  margin-left: 5px;
+}

@@ -4,9 +4,9 @@ Frontend ![GStatViewer](https://img.shields.io/website-up-down-green-red/https/g
 
 Backend ![GStatCore](https://img.shields.io/website-up-down-green-red/https/g-stat-core.herokuapp.com.svg)
 
-# **Development Status** ![Generic badge](https://img.shields.io/badge/Beta-Testing-yellow.svg)
+# **Development Status** ![Generic badge](https://img.shields.io/badge/Published-green.svg)
 
-The project is open source and the source code will be released once the application development is over.
+The project is open source and the source code for the application is available in the repository.
 
 Maintenance Schedule - Not Planned
 
