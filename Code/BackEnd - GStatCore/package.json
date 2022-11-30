@@ -1,0 +1,27 @@
+{
+  "name": "gstat.core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js --inspect",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.7.0",
+    "openssl": "^2.0.0",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.0",
+    "uuid": "^8.3.2"
+  }
+}

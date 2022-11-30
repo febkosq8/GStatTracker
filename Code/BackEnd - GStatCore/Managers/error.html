@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GStat-Tracker</title>
+	</head>
+	<style>
+		html,
+		body {
+			height: 100vh;
+			background: black;
+			width: 100vh;
+			overflow: hidden;
+		}
+		.bg {
+			display: flex;
+			height: 100%;
+			width: 100%;
+			flex-direction: row;
+			padding-top: 20px;
+		}
+		.pacman {
+			position: absolute;
+			padding-top: 50px;
+			top: 70px;
+			left: 10%;
+			height: 150px;
+			z-index: 5;
+			overflow: hidden;
+		}
+		.top {
+			width: 60px;
+			height: 30px;
+			border-radius: 150px 150px 0 0;
+			background-color: #e0e246;
+			animation: pac-top 0.5s infinite;
+		}
+		.bottom {
+			width: 60px;
+			height: 30px;
+			border-radius: 0 0 150px 150px;
+			background-color: #e0e246;
+			animation: pac-bottom 0.5s infinite;
+		}
+		@keyframes pac-top {
+			0% {
+				transform: rotateZ(-45deg);
+			}
+			50% {
+				transform: rotateZ(0deg);
+			}
+			100% {
+				transform: rotateZ(-45deg);
+			}
+		}
+		@keyframes pac-bottom {
+			0% {
+				transform: rotateZ(45deg);
+			}
+			50% {
+				transform: rotateZ(0deg);
+			}
+			100% {
+				transform: rotateZ(45deg);
+			}
+		}
+		.eaten {
+			width: 2000px;
+			height: 20px;
+			background-color: black;
+			position: relative;
+			top: 140px;
+			left: -89%;
+			z-index: 3;
+		}
+		@keyframes eating {
+			0% {
+				left: 0%;
+			}
+			100% {
+				left: 100%;
+			}
+		}
+		.eater {
+			position: absolute;
+			top: 0px;
+			left: 50px;
+			animation: eating 5s linear forwards;
+		}
+		.food {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			position: absolute;
+			top: 145px;
+			left: 300px;
+			width: 80%;
+			z-index: 1;
+		}
+		.dot {
+			background: white;
+			height: 10px;
+			border-radius: 50%;
+			aspect-ratio: 1;
+		}
+		.enemy {
+			background: #c74e4e;
+			height: 60px;
+			width: 60px;
+			box-shadow: black 0px 0px 0px 14px;
+			border-top-left-radius: 50%;
+			border-top-right-radius: 50%;
+			position: absolute;
+			top: 120px;
+			right: 0%;
+			display: flex;
+			z-index: 100000;
+			flex-direction: row;
+		}
+		.foot {
+			background: black;
+			height: 20px;
+			position: relative;
+			top: 55px;
+			aspect-ratio: 1;
+			transform: rotateZ(45deg);
+		}
+		.error-text {
+			color: white;
+			font-size: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+	<script>
+		function waitAndGo() {
+			setTimeout(function () {
+				window.location.href = "https://gstattracker.tk";
+			}, 5000);
+		}
+	</script>
+	<body onload="waitAndGo()">
+		<div class="bg">
+			<div class="eater">
+				<div class="pacman">
+					<div class="top"></div>
+					<div class="bottom"></div>
+				</div>
+				<div class="eaten"></div>
+			</div>
+			<div class="food">
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+			</div>
+			<div class="enemy">
+				<div class="foot"></div>
+				<div class="foot"></div>
+				<div class="foot"></div>
+			</div>
+		</div>
+		<div class="error-text">
+			<section>
+				<h1 class="error-heading">Looks like you lost your way</h1>
+				<p class="error-message">Redirecting in 5 seconds</p>
+			</section>
+		</div>
+	</body>
+	<style></style>
+</html>
