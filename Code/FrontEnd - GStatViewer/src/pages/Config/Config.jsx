@@ -425,11 +425,11 @@ function Config() {
                 content: (
                   <div className="p-4 w-100">
                     <p>
-                      Current Version : <strong>1.5.0.pub</strong>
+                      Current Version : <strong>1.0.0</strong>
                     </p>
                     <p>
                       Latest Change in this version :{" "}
-                      <strong>Mobile Ready Pages & Public release</strong>
+                      <strong>Public Release</strong>
                     </p>
                   </div>
                 ),
