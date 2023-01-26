@@ -3,6 +3,7 @@ require("dotenv").config();
 class DatabaseManager {
   static init() {
     let dbURL = process.env.DB_URL;
+    mongoose.set("strictQuery", false);
     mongoose.connect(dbURL);
     mongoose.connection.on("open", () => {
       console.log(

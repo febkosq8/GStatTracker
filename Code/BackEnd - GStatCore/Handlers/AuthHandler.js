@@ -1,4 +1,4 @@
-const uuid = require("uuid").v4;
+const crypto = require("crypto");
 const axios = require("axios");
 const jwt = require("jsonwebtoken");
 const passport = require("passport");
@@ -28,14 +28,11 @@ class AuthHandler {
   }
   constructor() {}
   getState() {
-    return uuid();
+    return crypto.randomUUID();
   }
   async checkAdmin(user, email, id) {
     const adminList = await AdminList.find();
-    return adminList.some(
-      (admin) =>
-        admin.username === user && admin.email === `${email}` && admin.id === id
-    );
+    return adminList.some((admin) => admin.username === user && admin.email === `${email}` && admin.id === id);
   }
   async retrieveToken(code, state) {
     try {
@@ -59,29 +56,25 @@ class AuthHandler {
       }
       const user = await axios.get(`https://api.github.com/user`, {
         headers: {
-          Authorization: `Bearer ${token}`,
-        },
+          Authorization: `Bearer ${token}`
+        }
       });
       let data = await user.data;
       let returndata = {
         login: data.login,
         id: data.id,
         email: data.email,
-        id: data.id,
+        id: data.id
       };
       return returndata;
     } catch (error) {
-      console.error(
-        "Error : Unable to acquire user login data from GitHub API"
-      );
+      console.error("Error : Unable to acquire user login data from GitHub API");
       throw error;
     }
   }
   getToken(req) {
     if (req.headers.authorization.split(" ")[1] === "null") return "";
-    let token = AuthHandler.getInstance().verifyJwt(
-      req.headers.authorization.split(" ")[1]
-    ).token;
+    let token = AuthHandler.getInstance().verifyJwt(req.headers.authorization.split(" ")[1]).token;
 
     return token;
   }
@@ -96,11 +89,7 @@ class AuthHandler {
   async validateUser(req, res) {
     const token = AuthHandler.getInstance().getToken(req);
     const { login, email, id } = await AuthHandler.getInstance().getUser(token);
-    const isAdmin = await AuthHandler.getInstance().checkAdmin(
-      login,
-      email,
-      id
-    );
+    const isAdmin = await AuthHandler.getInstance().checkAdmin(login, email, id);
     if (!isAdmin) res.sendStatus(401);
     return isAdmin;
   }
