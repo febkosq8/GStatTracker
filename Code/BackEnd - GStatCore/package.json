@@ -18,7 +18,7 @@
 		"express": "4.18.2",
 		"jsonwebtoken": "9.0.1",
 		"mongodb": "5.7.0",
-		"mongoose": "7.3.2",
+		"mongoose": "7.3.3",
 		"openssl": "2.0.0",
 		"passport": "0.6.0",
 		"passport-jwt": "4.0.1"
