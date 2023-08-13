@@ -1,4 +1,4 @@
-User can utilize [this](https://gstattracker.tk/repo) page to get information about a particular GitHub Repository. When logged in, our app will be able to access private data if available.
+User can utilize [this](https://gstatviewer.pages.dev/repo) page to get information about a particular GitHub Repository. When logged in, our app will be able to access private data if available.
 
 The UI includes an input bar where the _repository directory (author/repository name)_ is given along with the submit button.
 

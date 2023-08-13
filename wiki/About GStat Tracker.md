@@ -1,6 +1,6 @@
 ## About GStat Tracker
 
-[GStatTracker](https://gstattracker.tk/) is a web based application that helps to monitor various statistics of various GitHub users and their repositories.
+[GStatTracker](https://gstatviewer.pages.dev/) is a web based application that helps to monitor various statistics of various GitHub users and their repositories.
 Built by incorporating libraries and services like ReactJS, NodeJS, MongoDB, BootStrap, SCSS, Google Analytics 4 to work with the [GitHub REST API](https://docs.github.com/en/rest).
 
 It has a scalable design and supports many functions that enable a good overview onto various data points available from GitHub API.

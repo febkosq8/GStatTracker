@@ -1,4 +1,4 @@
-User can utilize [this](https://gstattracker.tk/bulkrepo) page to get information about the last commit on multiple GitHub Repositories. When logged in, our app will be able to access private data if available.
+User can utilize [this](https://gstatviewer.pages.dev/bulkrepo) page to get information about the last commit on multiple GitHub Repositories. When logged in, our app will be able to access private data if available.
 
 The UI includes an input bar where the _repository directory (author/repository name)_ along with the edit, delete & submit button for the list is given along with the submit button.
 

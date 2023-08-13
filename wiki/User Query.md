@@ -1,4 +1,4 @@
-User can utilize [this](https://gstattracker.tk/user) page to get information about a particular GitHub user and their repositories. When logged in, our app will be able to access private data if available.
+User can utilize [this](https://gstatviewer.pages.dev/user) page to get information about a particular GitHub user and their repositories. When logged in, our app will be able to access private data if available.
 
 The UI includes an input bar where the _username_ of the author is given, a dropdown to select the amount of entries to be shown [per page](https://github.com/febkosq8/GStatTracker/wiki/Features#max-entries-per-page) along with the submit button.
 

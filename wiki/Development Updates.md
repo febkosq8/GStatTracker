@@ -1,6 +1,6 @@
 # **Deployment Status**
 
-Frontend ![GStatViewer](https://img.shields.io/website-up-down-green-red/https/gstattracker.tk.svg)
+Frontend ![GStatViewer](https://img.shields.io/website-up-down-green-red/https/gstatviewer.pages.dev.svg)
 
 Backend ![GStatCore](https://img.shields.io/website-up-down-green-red/https/g-stat-core.herokuapp.com.svg)
 

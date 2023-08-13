@@ -1,4 +1,4 @@
-User can utilize [this](https://gstattracker.tk/analyze) page to analyze all the available data and get average grades metrics for various aspects of the GitHub Repository. The various categories of grades are Per commit grade, Per commit message Grade, Per commit changes Grade, Per Author Grade & Per Repo Grade. When logged in, our app will be able to access private data if available.
+User can utilize [this](https://gstatviewer.pages.dev/analyze) page to analyze all the available data and get average grades metrics for various aspects of the GitHub Repository. The various categories of grades are Per commit grade, Per commit message Grade, Per commit changes Grade, Per Author Grade & Per Repo Grade. When logged in, our app will be able to access private data if available.
 
 The UI includes an input bar where the _repository directory (author/repository name)_ is given along with the submit button.
 
